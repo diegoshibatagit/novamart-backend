@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NovaMart — Atendimento por voz</title>
+  <style>
+    :root { --ink:#1b1f24; --muted:#5b6470; --brand:#0f5fd7; --bg:#f6f8fb; --card:#fff; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color:var(--ink); background:var(--bg); }
+    header { background:var(--card); border-bottom:1px solid #e6e9ee; }
+    .wrap { max-width:960px; margin:0 auto; padding:16px 24px; }
+    .logo { font-weight:800; font-size:22px; letter-spacing:-0.02em; color:var(--brand); }
+    .logo span { color:var(--ink); }
+    main .wrap { padding-top:40px; padding-bottom:120px; }
+    h1 { font-size:32px; margin:0 0 8px; }
+    p.lead { color:var(--muted); font-size:18px; margin:0 0 32px; max-width:640px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:16px; }
+    .card { background:var(--card); border:1px solid #e6e9ee; border-radius:12px; padding:18px; }
+    .card h3 { margin:0 0 6px; font-size:16px; }
+    .card p { margin:0; color:var(--muted); font-size:14px; }
+    .hint { margin-top:32px; padding:16px 18px; background:#eef4ff; border:1px solid #d6e2fb; border-radius:12px; font-size:14px; color:#1d3b73; }
+    .hint code { background:#fff; padding:1px 6px; border-radius:6px; border:1px solid #d6e2fb; }
+    footer { color:var(--muted); font-size:12px; text-align:center; padding:24px; }
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><div class="logo">Nova<span>Mart</span></div></div></header>
+  <main>
+    <div class="wrap">
+      <h1>Fale com a Lívia</h1>
+      <p class="lead">A assistente de voz da NovaMart consulta o status do seu pedido, troca o endereço de entrega de pedidos ainda em processamento, explica a política de trocas e devoluções e tira dúvidas sobre os produtos do catálogo. Clique no botão no canto da tela para começar.</p>
+      <div class="grid">
+        <div class="card"><h3>Pedidos</h3><p>Status, itens e previsão de entrega, depois de confirmar que é você.</p></div>
+        <div class="card"><h3>Troca de endereço</h3><p>Só para pedidos em processamento, com a sua confirmação.</p></div>
+        <div class="card"><h3>Trocas e devoluções</h3><p>Política de 30 dias, nota fiscal e o que não entra.</p></div>
+        <div class="card"><h3>Produtos</h3><p>Dúvidas e recomendações da linha Nova.</p></div>
+      </div>
+      <div class="hint">
+        Para testar: conta <code>10000001</code> com CEP <code>01310-100</code> (pedido <code>12345</code>, enviado) ou conta <code>10000002</code> com CEP <code>04538-132</code> (pedido <code>67890</code>, em processamento). A Lívia nunca lê o endereço completo nem o CEP de volta.
+      </div>
+    </div>
+  </main>
+  <footer>NovaMart · demonstração para o ElevenAgents Partner Hackathon Brasil · as ligações são gravadas para fins de qualidade</footer>
+
+  <!-- Widget ElevenAgents: agente público (sem autenticação), publicado na main com split de tráfego entre branches -->
+  <elevenlabs-convai agent-id="agent_7301m5za85xsew5sdpj3cdqw0xc5"></elevenlabs-convai>
+  <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+</body>
+</html>
